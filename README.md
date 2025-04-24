@@ -1,5 +1,7 @@
 # scrontab_scripts
+By Avery Kiihne
 
+Personal copy. Original code at https://gitlab.gfdl.noaa.gov/Avery.Kiihne/weekly-epmt-report
 ## Description
 This project was designed around gathering long term data that cannot fit in the EPMT Data Base, via scripts automated with scrontab. each time scrontab runs, several scripts pull every job for a given date, 7 days ealier than the current date. These scripts break jobs into multiple, and sometimes overlapping categories, and record # of jobs, average rssmax, duration, read_bytes, write_bytes, cpu_time, time_waiting, num_procs, flux ((read +write bytes)/cpu_time) and their error for that date. Currently, we are tracking esm4.2,esm4.5, SPEAR,am4, cm4, canopy, bronx, and a number of power users. Jupyter notebook copies of the .py script exist for ease of understanding and experimentation. Several other notebooks handle ways of viewing this data.
 
