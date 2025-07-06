@@ -55,13 +55,7 @@ bronx_exp_names=[]
 total_jobs=all_jobs.count()
 job_num=0
 
-#check to see if day is already recorded. if it is, exit code
-#this allows code to be run much more frequently, without redoing days, which helps whith timing out issues
-recent_job = eq.get_jobs(limit = 1, after = off_set_days, fmt = 'orm')[0]
 
-recent_job_date = recent_job.created_at
-current_date = str(recent_job_date.strftime("%m")+'-'+recent_job_date.strftime("%d")+'-'+recent_job_date.strftime("%y"))
-filename = 'bronx_history_'+'DO_NOT_DELETE.pkl'
 # Read dictionary pkl file
 with open(filename, 'rb') as fp:
     metrics_history = pickle.load(fp)
