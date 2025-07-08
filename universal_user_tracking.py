@@ -30,7 +30,7 @@ start_orm = eq.get_jobs(after=start_date, fmt = 'orm',trigger_post_process=False
 job_num = older_orm.count() - start_orm.count()    #clip off the jobs that happened between current time and the end of the week being reported on
 all_jobs=eq.get_jobs(limit =int(job_num), offset = start_orm.count(), fmt='orm',trigger_post_process=False)
 
-names = ['Ian.Laflotte', 'Raphael.Dussin','William.Cooke','Lori.Sentman','Huan.Guo','Olga.Sergienko','Mitchell.Bushuk','Linjiong.Zhou','Larry.Horowitz','Colleen.McHugh ','Hiroyuki.Murakami','Ming.Zhao']
+names = ['user1','user2']
 for name_number in range(len(names)):
     filename = 'user_hist_storage_folder/'+names[name_number]+'_history_'+'DO_NOT_DELETE.pkl'
 
